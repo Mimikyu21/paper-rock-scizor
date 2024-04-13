@@ -1,0 +1,64 @@
+import random
+
+while True:
+    #list choice
+    choiches = ['rock', 'paper', 'scizor']
+
+
+    #computer random choice
+    computer = random.choice(choiches)
+
+    #user choice input
+    player = None
+
+    #if user dont chose the list
+    while player not in choiches:
+        player = input("choice rock, paper, scizor : ").lower()
+
+    #win  condition
+        if player == computer:
+            print("Computer :", computer)
+            print("Player :", player)
+            print("Tie!")
+
+        elif player == 'rock':
+            if computer == 'scizor':
+                print("Computer : ", computer)
+                print("Player : ", player)
+                print("Player Won!")
+
+            if computer == 'paper':
+                print("Computer : ", computer)
+                print("Player : ", player)
+                print("Player Lose!")
+        elif player == 'paper':
+            if computer == 'rock':
+                print("Computer : ", computer)
+                print("Player : ", player)
+                print("Player Won!")
+
+            if computer == 'scizor':
+                print("Computer : ", computer)
+                print("Player : ", player)
+                print("Player Lose!")
+
+        elif player == 'scizor':
+            if computer == 'paper':
+                print("Computer : ", computer)
+                print("Player : ", player)
+                print("Player Won!")
+
+            if computer == 'rock':
+                print("Computer : ", computer)
+                print("Player : ", player)
+                print("Player Lose!")
+
+    #stop game condition
+    again = input("Want To Play Again ? (yes/no): ").lower()
+    if again != "yes":
+        break
+print("bye fellas :P")
+
+
+
+
